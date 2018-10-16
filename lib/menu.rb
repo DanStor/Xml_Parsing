@@ -19,6 +19,14 @@ class Menu
     @menu.search('price')
   end
 
+  def get_calories
+    @menu.search('calories')
+  end
+
+  def get_food
+    @menu.search('food')
+  end
+
   def getXPathNames
     @menu.xpath('//name')
   end
@@ -26,5 +34,5 @@ class Menu
 end
 
 bobsBurgers = Menu.new 'xml/menu.xml'
-# puts bobsBurgers.get_food_names
-puts bobsBurgers.getXPathNames
+puts bobsBurgers.get_food
+# puts bobsBurgers.getXPathNames
