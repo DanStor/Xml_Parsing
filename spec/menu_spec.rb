@@ -13,10 +13,10 @@ describe "Guiseppe's Menu" do
 
   it "should have no items with calories over 1000 except for the full breakfast" do
     @menu.get_food.each do |item|
-      if item.children[1].content == "Full Breakfast"
-        expect(item.children[7].content.to_i).to eq 1200
+      if item.search('name')[0].content == "Full Breakfast"
+        expect(item.search('calories')[0].content.to_i).to eq 1200
       else
-        expect(item.children[7].content.to_i).to be < 1000
+        expect(item.search('calories')[0].content.to_i).to be < 1000
       end
     end
   end
