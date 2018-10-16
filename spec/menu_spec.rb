@@ -11,9 +11,13 @@ describe "Guiseppe's Menu" do
     end
   end
 
-  it "should have no item with calories over 1000 except for the full breakfast" do
-    @menu.get_calories.each do |item|
-      expect(item.content.to_i).to be < 1300
+  it "should have no items with calories over 1000 except for the full breakfast" do
+    @menu.get_food.each do |item|
+      if item.children[1].content == "Full Breakfast"
+        expect(item.children[7].content.to_i).to eq 1200
+      else
+        expect(item.children[7].content.to_i).to be < 1000
+      end
     end
   end
 end

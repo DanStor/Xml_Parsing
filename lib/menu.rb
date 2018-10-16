@@ -34,5 +34,5 @@ class Menu
 end
 
 bobsBurgers = Menu.new 'xml/menu.xml'
-puts bobsBurgers.get_food
+# puts bobsBurgers.get_food
 # puts bobsBurgers.getXPathNames
