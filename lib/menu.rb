@@ -27,6 +27,10 @@ class Menu
     @menu.search('food')
   end
 
+  def get_descriptions
+    @menu.search('description')
+  end
+
   def getXPathNames
     @menu.xpath('//name')
   end
